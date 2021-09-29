@@ -1,0 +1,35 @@
+[debug] [2021-09-29T13:52:13.152Z] ----------------------------------------------------------------------
+[debug] [2021-09-29T13:52:13.155Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP 840 G2\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js projects:create
+[debug] [2021-09-29T13:52:13.155Z] CLI Version:   9.18.0
+[debug] [2021-09-29T13:52:13.155Z] Platform:      win32
+[debug] [2021-09-29T13:52:13.155Z] Node Version:  v16.3.0
+[debug] [2021-09-29T13:52:13.156Z] Time:          Wed Sep 29 2021 20:52:13 GMT+0700 (Indochina Time)
+[debug] [2021-09-29T13:52:13.157Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-29T13:52:13.164Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-29T13:52:13.164Z] > authorizing via signed-in user (kythi2000@gmail.com)
+[debug] [2021-09-29T13:53:36.517Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-09-29T13:53:36.519Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-29T13:53:36.795Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Wed, 29 Sep 2021 13:53:35 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-29T13:53:37.016Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"googleLogin","name":"y"}
+[debug] [2021-09-29T13:53:38.021Z] <<< HTTP RESPONSE 400 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Wed, 29 Sep 2021 13:53:37 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=798","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-29T13:53:38.021Z] <<< HTTP RESPONSE BODY {"error":{"code":400,"message":"Request contains an invalid argument.","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"},{"field":"project_id","description":"project_id contains prohibited words"},{"field":"display_name","description":"project display name must be at least 4 characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2021-09-29T13:53:38.299Z] FirebaseError: HTTP Error: 400, Request contains an invalid argument.
+    at module.exports (C:\Users\HP 840 G2\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\Users\HP 840 G2\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:41:35)
+    at Request.self.callback (C:\Users\HP 840 G2\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.emit (node:domain:470:12)
+    at Request.<anonymous> (C:\Users\HP 840 G2\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at Request.emit (node:domain:470:12)
+    at IncomingMessage.<anonymous> (C:\Users\HP 840 G2\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+    at IncomingMessage.emit (node:domain:470:12)
+    at endReadableNT (node:internal/streams/readable:1329:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
